@@ -1,0 +1,29 @@
+import math
+#equation du second degre
+print("RESOUDRE UNE EQUATION DU 2nd: Ax²+Bx+C=0")
+while True:
+    a = int(input("A>"))
+    b = int(input("B>"))
+    c = int(input("C>"))
+    print("EQUATION A RESOUDRE >", a, "x²+", b, "x+", c, "= 0")
+    n = int(input("EQUATION NON CORRECT : 0     EQUATION CORRECT: 1    CHOIX >"))
+    if n <= 0:
+        continue
+    break
+print("CALCUL DU DELTA")
+#calcul du delta
+delta = int(a*a)+b+c
+d=math.sqrt(delta)
+print("Delta=",a,"²+",b,"+",c,"=",delta)
+print("racine carree de delta =",d)
+
+
+if delta > 0:
+    x1=int((-b- d/(2*a)))
+    x2=int((-b+ d/(2*a)))
+    print ("S={",x1,";",x2,"}")
+elif delta == 0:
+x1=-1*b/(2*a)
+    print("S={",x1,"}")
+else :
+    print("LE DISCRIMINANT EST <0 DONC PAS DE SOLUTIONS")
